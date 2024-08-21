@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    public: true
+
+  # repositories
+  prestashop.module.chatgptcontentgenerator.repository.gptcontentgenerator:
+    class: 'PrestaShop\Module\Chatgptcontentgenerator\Repository\GptContentGeneratorRepository'
+    public: true
+    factory: ['@doctrine.orm.default_entity_manager', getRepository]
+    arguments:
+      - PrestaShop\Module\Chatgptcontentgenerator\Entity\GptContentGenerator
+    calls:
+      - { method: initRepository, arguments: ['@doctrine.dbal.default_connection', '%database_prefix%', '@doctrine.orm.default_entity_manager'] }
+

@@ -1,0 +1,2 @@
+*ERROR* 	v1.7.4.4	2024/05/19 - 00:50:17: Link to database cannot be established: SQLSTATE[HY000] [2002] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+ at line 120 in file classes/db/DbPDO.php

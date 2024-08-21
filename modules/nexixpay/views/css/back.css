@@ -1,0 +1,214 @@
+/*
+ * Copyright (c) 2021 Nexi Payments S.p.A.
+ * @author      iPlusService S.r.l.
+ * @copyright   Copyright (c) 2021 Nexi Payments S.p.A. (https://ecommerce.nexi.it)
+ * @license     GNU General Public License v3.0
+ * @category    Payment Module
+ * @version     5.3.0
+ */
+
+.operation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.operation-container .input-container {
+    max-width: 50%;
+    margin-right: 0.8rem;
+    min-width: 80px;
+}
+
+.operation-container .button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.operation-container .button-container .refund-button-container {
+    margin-left: 0.4rem;
+}
+
+.nexi-config-input,
+.bootstrap .nexi-config-input {
+    width: 100% !important;
+    min-width: 550px;
+    max-width: 50%;
+}
+
+.nexi-config-input .nexi-config-input {
+    max-width: 100%;
+}
+
+form.nexixpay .form-group p.help-block {
+    max-width: 50%;
+    min-width: 550px;
+}
+
+form.nexixpay .form-group .panel{
+    width: 100% !important;
+    min-width: 550px;
+    max-width: 50%;
+}
+
+.nexi-config-input.link-input .nexi-config-input.link-input {
+    min-width: unset;
+}
+
+form.nexixpay .form-group #categories-tree .tree-item .tree-dot {
+    display: none;
+}
+
+@media (max-width: 1199px) {
+    form.nexixpay .form-group p.help-block,
+    form.nexixpay .form-group .panel,
+    .nexi-config-input,
+    .bootstrap .nexi-config-input,
+    .nexi-config-input.color-fields {
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .stylePreview {
+        overflow-x: auto;
+    }
+    
+    .style-block-input-container input[type="color"].styleBlock,
+    .style-block-input-container .info-helper {
+        margin: 4px 0;
+    }
+}
+
+.nexi-payment-detail p {
+    margin-bottom: unset;
+}
+
+.info-helper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f5f8f9;
+    vertical-align: top;
+    border: 1px solid #c7d6db;
+    border-radius: 3px;
+    width: 29px;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
+.nexi-config-input.color-fields {
+    margin: 0;
+}
+
+.nexi-config-input.color-fields > div:nth-child(1) {
+    padding-left: unset;
+}
+
+.nexi-config-input.color-fields > div:nth-child(2) {
+    padding-right: unset;
+}
+
+.style-block-input-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.style-block-input-container > input {
+    width: 100%;
+}
+
+.style-block-input-container select.styleBlock,
+.style-block-input-container input[type="text"].styleBlock {
+    border-right: none;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+.style-block-input-container input[type="color"].styleBlock {
+    border-right: none;
+    border-color: #bbcdd2;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.stylePreview *,
+.stylePreview :after,
+.stylePreview :before {
+    box-sizing: border-box;
+}
+
+.stylePreview :focus {
+    outline: none;
+}
+
+.stylePreview body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 15px;
+    top: 0px;
+    left: 0px;
+}
+
+.stylePreview .Bricks {
+    display: inline-block;
+    width: 100%;
+    max-width: 50%;
+    min-width: 550px;
+    height: 32px;
+    border: 1px solid #d6d4d4;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.stylePreview .Bricks,
+.Bricks > * {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    top: 0;
+    line-height: 1.2em;
+}
+
+.stylePreview input {
+    background-color: transparent;
+    border: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    height: 1.2em;
+}
+
+.stylePreview .placePan {
+    display: inline-block;
+    left: 0;
+}
+
+.stylePreview .placeExp {
+    display: inline-block;
+    right: 55px;
+}
+
+.stylePreview .placeCvv {
+    display: inline-block;
+    right: 0;
+}
+
+.stylePreview .input-container {
+    position: relative;
+}
+
+.stylePreview .input-container input {
+    width: 100%;
+    box-sizing: border-box;
+}

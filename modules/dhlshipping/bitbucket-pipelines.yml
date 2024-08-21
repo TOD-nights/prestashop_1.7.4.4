@@ -1,0 +1,76 @@
+image: bitbull/webserver
+pipelines:
+  tags:
+    '*':
+      - step:
+          name: Create module package
+          script:
+            - rm -rf dev .git config_it.xml
+            - mkdir -p /tmp/dhlshipping
+            - mv * /tmp/dhlshipping
+            - cd /tmp/
+            - zip -r $BITBUCKET_CLONE_DIR/dhlshipping.zip dhlshipping
+          artifacts:
+            - 'dhlshipping.zip'
+
+  custom:
+    deploy_ps_17:
+      - step:
+          name: Download dependencies and build image
+          caches:
+            - composerdeps
+          script:
+            - set -e
+
+            - git clone --branch 1.7.5.0 https://github.com/PrestaShop/PrestaShop/ dev/build
+            - composer install --no-dev --working-dir=dev/build
+
+            - mkdir -p dev/build/modules/dhlshipping
+            - cp -R data upgrade classes views dhlshipping.php index.php dev/build/modules/dhlshipping/
+            - cp dev/ps17/parameters.php dev/build/app/config/
+            - cp dev/.htaccess dev/build/.htaccess
+            - sed -i -e "s/define('_PS_MODE_DEV_', true);/define('_PS_MODE_DEV_', false);/" dev/build/config/defines.inc.php
+
+            # Created dummy settings.inc.php b/c even if deprecated in 1.7, is still included in 1.7.2.3
+            - touch dev/build/config/settings.inc.php
+
+            - docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+            - docker build -t $DOCKERHUB_IMAGE_17 dev
+            - docker push $DOCKERHUB_IMAGE_17
+          services:
+            - docker
+
+      - step:
+          name: Deploy to demo environment
+          deployment: test
+          script:
+            - ssh root@$DOCKER_DEMO_HOST "cd $DOCKER_DEMO_DIR_17 && docker-compose pull && docker stop $DOCKER_DEMO_CONTAINER_NAME_17 && docker rm $DOCKER_DEMO_CONTAINER_NAME_17 && docker-compose up -d"
+
+    deploy_ps_16:
+      - step:
+          name: Download dependencies and build image
+          script:
+            - set -e
+
+            - git clone --branch 1.6.1.23 https://github.com/PrestaShop/PrestaShop/ dev/build
+
+            - mkdir -p dev/build/modules/dhlshipping
+            - cp -R data upgrade classes views dhlshipping.php index.php dev/build/modules/dhlshipping/
+            - cp dev/ps16/settings.inc.php dev/build/config/
+            - cp dev/.htaccess dev/build/.htaccess
+
+            - docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+            - docker build -t $DOCKERHUB_IMAGE_16 dev
+            - docker push $DOCKERHUB_IMAGE_16
+          services:
+            - docker
+
+      - step:
+          name: Deploy to demo environment
+          deployment: test
+          script:
+            - ssh root@$DOCKER_DEMO_HOST "cd $DOCKER_DEMO_DIR_16 && docker-compose pull && docker stop $DOCKER_DEMO_CONTAINER_NAME_16 && docker rm $DOCKER_DEMO_CONTAINER_NAME_16 && docker-compose up -d"
+
+definitions:
+  caches:
+    composerdeps: $HOME/.composer/cache

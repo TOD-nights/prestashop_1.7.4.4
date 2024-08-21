@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ps_themecusto</name>
+    <displayName><![CDATA[Personalizzazione del template grafico]]></displayName>
+    <version><![CDATA[1.0.7]]></version>
+    <description><![CDATA[Puoi configurare e personalizzare in modo semplice il template grafico e i principali moduli nativi della tua homepage. Funzione disponibile in Design &gt; pagina Template grafico &amp; Logo.]]></description>
+    <author><![CDATA[PrestaShop]]></author>
+    <tab><![CDATA[]]></tab>
+    <is_configurable>0</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

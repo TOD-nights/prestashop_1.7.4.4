@@ -1,0 +1,7 @@
+{
+    "name": "dhl/shippingdhl",
+    "type": "prestashop-module",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

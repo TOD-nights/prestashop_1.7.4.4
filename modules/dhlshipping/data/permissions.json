@@ -1,0 +1,219 @@
+{
+  "carriers": {
+    "GET": "on"
+  },
+  "addresses": {
+    "GET": "on"
+  },
+  "cart_rules": {
+    "GET": "on"
+  },
+  "carts": {
+    "GET": "on"
+  },
+  "categories": {
+    "GET": "on"
+  },
+  "combinations": {
+    "GET": "on"
+  },
+  "configurations": {
+    "GET": "on"
+  },
+  "contacts": {
+    "GET": "on"
+  },
+  "content_management_system": {
+    "GET": "on"
+  },
+  "countries": {
+    "GET": "on"
+  },
+  "currencies": {
+    "GET": "on"
+  },
+  "customer_messages": {
+    "GET": "on"
+  },
+  "customer_threads": {
+    "GET": "on"
+  },
+  "customers": {
+    "GET": "on"
+  },
+  "customizations": {
+    "GET": "on"
+  },
+  "deliveries": {
+    "GET": "on"
+  },
+  "employees": {
+    "GET": "on"
+  },
+  "groups": {
+    "GET": "on"
+  },
+  "guests": {
+    "GET": "on"
+  },
+  "image_types": {
+    "GET": "on"
+  },
+  "images": {
+    "GET": "on"
+  },
+  "languages": {
+    "GET": "on"
+  },
+  "manufacturers": {
+    "GET": "on"
+  },
+  "messages": {
+    "GET": "on"
+  },
+  "order_carriers": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "order_details": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "order_histories": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "order_invoices": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "order_payments": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "order_slip": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "order_states": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "orders": {
+    "GET": "on",
+    "PUT": "on",
+    "POST": "on"
+  },
+  "price_ranges": {
+    "GET": "on"
+  },
+  "product_customization_fields": {
+    "GET": "on"
+  },
+  "product_feature_values": {
+    "GET": "on"
+  },
+  "product_features": {
+    "GET": "on"
+  },
+  "product_option_values": {
+    "GET": "on"
+  },
+  "product_options": {
+    "GET": "on"
+  },
+  "product_suppliers": {
+    "GET": "on"
+  },
+  "products": {
+    "GET": "on"
+  },
+  "search": {
+    "GET": "on"
+  },
+  "shop_groups": {
+    "GET": "on"
+  },
+  "shop_urls": {
+    "GET": "on"
+  },
+  "shops": {
+    "GET": "on"
+  },
+  "specific_price_rules": {
+    "GET": "on"
+  },
+  "specific_prices": {
+    "GET": "on"
+  },
+  "states": {
+    "GET": "on"
+  },
+  "stock_availables": {
+    "GET": "on"
+  },
+  "stock_movement_reasons": {
+    "GET": "on"
+  },
+  "stock_movements": {
+    "GET": "on"
+  },
+  "stocks": {
+    "GET": "on"
+  },
+  "stores": {
+    "GET": "on"
+  },
+  "suppliers": {
+    "GET": "on"
+  },
+  "supply_order_details": {
+    "GET": "on"
+  },
+  "supply_order_histories": {
+    "GET": "on"
+  },
+  "supply_order_receipt_histories": {
+    "GET": "on"
+  },
+  "supply_order_states": {
+    "GET": "on"
+  },
+  "supply_orders": {
+    "GET": "on"
+  },
+  "tags": {
+    "GET": "on"
+  },
+  "tax_rule_groups": {
+    "GET": "on"
+  },
+  "tax_rules": {
+    "GET": "on"
+  },
+  "taxes": {
+    "GET": "on"
+  },
+  "translated_configurations": {
+    "GET": "on"
+  },
+  "warehouse_product_locations": {
+    "GET": "on"
+  },
+  "warehouses": {
+    "GET": "on"
+  },
+  "weight_ranges": {
+    "GET": "on"
+  },
+  "zones": {
+    "GET": "on"
+  }
+}
